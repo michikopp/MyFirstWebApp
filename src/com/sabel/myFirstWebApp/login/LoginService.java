@@ -1,4 +1,4 @@
-package com.sabel.myFirstWebApp;
+package com.sabel.myFirstWebApp.login;
 
 public class LoginService {
 
