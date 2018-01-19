@@ -20,6 +20,10 @@ public class ToDoService {
     public List<ToDo> retrieveTodos() {
         return todos;
     }
+
+    public void add(ToDo toDo) {
+        todos.add(toDo);
+    }
 }
 
 
