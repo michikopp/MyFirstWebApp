@@ -23,6 +23,8 @@
 </head>
 <body>
 
+
+
 <nav class="navbar navbdar-default">
     <a href="http://localhost:8080/todo.do" class="navbar-brand">GBS</a>
     <ul class="nav navbar-nav">
