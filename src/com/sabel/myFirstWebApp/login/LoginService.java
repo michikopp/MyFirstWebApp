@@ -7,6 +7,6 @@ public class LoginService {
             return false;
         }
 
-        return name.toLowerCase().equals(password);
+        return password.toLowerCase().equals("geheim");
     }
 }
