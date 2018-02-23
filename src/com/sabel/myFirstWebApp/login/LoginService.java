@@ -1,5 +1,8 @@
 package com.sabel.myFirstWebApp.login;
 
+import javax.enterprise.context.ApplicationScoped;
+
+@ApplicationScoped
 public class LoginService {
 
     public boolean checkPassword(String name, String password) {

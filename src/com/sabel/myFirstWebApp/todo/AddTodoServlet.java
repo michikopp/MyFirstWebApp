@@ -1,5 +1,6 @@
 package com.sabel.myFirstWebApp.todo;
 
+import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,7 +12,8 @@ import java.io.IOException;
 @WebServlet (urlPatterns = "/addTodo.do")
 public class AddTodoServlet extends HttpServlet {
 
-    private ToDoService toDoService = new ToDoService();
+    @Inject
+    private ToDoService toDoService;
 
 
     @Override

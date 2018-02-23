@@ -2,6 +2,7 @@ package com.sabel.myFirstWebApp.login;
 
 import com.sabel.myFirstWebApp.todo.ToDoService;
 
+import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -12,7 +13,8 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/login.do", "/einloggen"})
 public class LoginServlet extends HttpServlet {
 
-    private LoginService loginService = new LoginService();
+    @Inject
+    private LoginService loginService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

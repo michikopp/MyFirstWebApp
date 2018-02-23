@@ -1,5 +1,6 @@
 package com.sabel.myFirstWebApp.todo;
 
+import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,13 +10,14 @@ import java.io.IOException;
 
 
 @WebServlet (urlPatterns = "/todo.do")
-public class TodoServlet extends HttpServlet {
+public class ListToDoServlet extends HttpServlet {
 
-    private ToDoService toDoService = new ToDoService();
+    @Inject
+    private ToDoService toDoService;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setAttribute("todos", toDoService.retrieveTodos());
-        req.getRequestDispatcher("/WEB-INF/Views/todo.jsp").forward(req, resp);
+        req.getRequestDispatcher("/WEB-INF/Views/listTodo.jsp").forward(req, resp);
     }
 }
